@@ -1,2 +1,126 @@
-# NETWORKWALKS-MURTALLIS-B084A-WK2-PM1--CYBERSECURITY-LAB-SETUP-
-WEEK 2-PM1  WEEK 2 | PROJECT MODULE 1 
+WEEK 2 | PROJECT MODULE 1
+FOOTPRINTING & RECONNAISSANCE ATTACKS WITH MULTIPLE KALI TOOLS
+   
+📌 Project Overview
+This repository documents the execution and findings of Week 2 - Project Module 1 (W2-PM1) focused on Footprinting & Reconnaissance Attacks using various security and information-gathering tools within Kali Linux.
+The primary target of this passive and active reconnaissance module is networkwalks.com.
+
+🛠️ Summary of Tasks Executed
+Task
+Tool
+Purpose / Objective
+Key Output / Finding
+Task 1
+whois
+Domain registration & WHOIS data lookup
+Registrar: GoDaddy, LLC / DNS: HostGator
+Task 2
+whatweb
+Web technology fingerprinting
+Web Server: Apache, CMS: WordPress 7.1.4
+Task 3
+nslookup
+DNS resolution to target IP address
+Resolved IP: 192.232.216.135
+Task 4
+curl -I
+HTTP response header inspection
+Server: Apache, Cache: x-nginx-cache
+Task 5
+wafw00f
+Web Application Firewall (WAF) detection
+WAF Detected: ModSecurity (SpiderLabs)
+Task 6
+dnsrecon
+Comprehensive DNS record enumeration
+Found SOA, NS, MX, A, TXT, & SRV records
+
+
+🚀 Execution & Detailed Step-by-Step Findings
+Task 1: Domain Registration Details (whois)
+Objective: Query the public domain registration records to identify domain ownership, registration dates, contact details, and assigned name servers.
+Command:
+whois networkwalks.com
+Key Results & Findings:
+Domain Name: NETWORKWALKS.COM
+Registrar: GoDaddy.com, LLC (IANA ID: 146)
+Creation Date: 2019-11-06T22:51:46Z
+Expiry Date: 2027-11-06T22:51:46Z
+Registrant Contact: Privacy Protected via Domains By Proxy, LLC (Tempe, Arizona, US)
+Name Servers:
+NS6135.HOSTGATOR.COM
+NS6136.HOSTGATOR.COM
+NS29.DOMAINCONTROL.COM
+NS30.DOMAINCONTROL.COM
+DNSSEC Status: unsigned
+
+Task 2: Fingerprint Web Technologies (whatweb)
+Objective: Identify technologies used to power the target website, including CMS version, server software, scripts, and frameworks.
+Command:
+whatweb networkwalks.com
+Key Results & Findings:
+Target URLs Analyzed: http://networkwalks.com (301 Redirect) ➔ https://networkwalks.com/ (200 OK)
+IP Address: 192.232.216.135
+Web Server: Apache
+Content Management System (CMS): WordPress 7.1.4
+WordPress Plugin Identified: WordPress Download Manager 3.3.76
+JS Libraries / Frameworks: Bootstrap [7.1.4], jQuery [3.7.1]
+Analytics / Tracking: Google-Tag-Manager, Open-Graph-Protocol
+Cookies Detected: __wpdm_client
+
+Task 3: Resolve Domain to IP Address (nslookup)
+Objective: Query DNS servers to translate the domain name into its corresponding IPv4 address.
+Command:
+nslookup networkwalks.com
+Key Results & Findings:
+DNS Server Used: 10.0.0.2#53
+Target Domain: networkwalks.com
+Resolved IPv4 Address: 192.232.216.135
+
+Task 4: Read HTTP Response Headers (curl -I)
+Objective: Perform a HEAD request against the site to analyze raw server HTTP headers for information disclosure.
+Command:
+curl -I https://networkwalks.com
+Key Results & Findings:
+HTTP Status Code: HTTP/2 200
+Server Header: Apache
+Content Type: text/html; charset=UTF-8
+Cache & Proxy Headers:
+x-nginx-cache: WordPress
+x-endurance-cache-level: 0
+Security & Policy Headers:
+permissions-policy: private-state-token-redemption...
+referrer-policy: no-referrer-when-downgrade
+set-cookie: __wpdm_client=...; secure; HttpOnly
+
+Task 5: Web Application Firewall (WAF) Detection (wafw00f)
+Objective: Detect whether a Web Application Firewall (WAF) is active and protecting the website against payload attacks.
+Command:
+wafw00f networkwalks.com
+Key Results & Findings:
+Target Checked: https://networkwalks.com
+WAF Status: Detected
+Active Protection: ModSecurity (SpiderLabs) WAF
+Total Probing Requests: 2
+
+Task 6: Comprehensive DNS Record Enumeration (dnsrecon)
+Objective: Enumerate all associated DNS records including Name Servers (NS), Mail Servers (MX), Service Records (SRV), and TXT/SPF records.
+Command:
+dnsrecon -d networkwalks.com
+Key Results & Findings:
+SOA Record: ns6135.hostgator.com (50.87.144.87)
+NS Records:
+ns6136.hostgator.com (192.232.216.131) - BIND v9.16.23-RH
+ns6135.hostgator.com (50.87.144.87) - BIND v9.16.23-RH
+A Record: networkwalks.com ➔ 192.232.216.135
+MX Record: mail.networkwalks.com ➔ 192.232.216.135
+TXT Records:
+Google Site Verification: google-site-verification=rr04eRmqHoWY3XemnizDNVK4q75X-Ij-mjgEeg-UsYI
+SPF Record: v=spf1 +a +mx +ip4:50.87.144.87 +include:websitewelcome.com ~all
+SRV Records (Auto-discovery Services):
+Multiple _autodiscover._tcp.networkwalks.com pointing to cpanelemaildiscovery.cpanel.net (Ports 443)
+
+🏁 Conclusion
+The reconnaissance phase successfully gathered essential infrastructure metadata for networkwalks.com. The asset operates on Apache behind a ModSecurity WAF, utilizing HostGator DNS servers and running a WordPress-based web application.
+
+Disclaimer: This documentation and associated commands were performed for educational and authorized testing purposes as part of the Network Walks Cybersecurity Course.
