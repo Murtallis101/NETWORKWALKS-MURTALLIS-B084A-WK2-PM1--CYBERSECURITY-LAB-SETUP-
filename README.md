@@ -404,10 +404,14 @@ Technical troubleshooting logs (Hypervisor screen captures, DNS resolution handl
 
 
 Author & Reference Information
+
 •	Author: Murtallis Marcus Roux
+
 •	LinkedIn Profile: www.linkedin.com/in/murtallis-roux-02b030270
+
 •	Github link: [github.com/Murtallis101/NETWORKWALKS-MURTALLIS-B084A-WK2-PM1--CYBERSECURITY-LAB-SETUP-/tree/main](https://github.com/Murtallis101/NETWORKWALKS-MURTALLIS-B084A-WK2-PM1--CYBERSECURITY-LAB-SETUP-/edit/main/README.md)](https://github.com/Murtallis101/NETWORKWALKS-MURTALLIS-B084A-WK2-PM1--CYBERSECURITY-LAB-SETUP-/edit/main/README.md)
-•	Google Docs Report: 
+
+•	Google Docs Report:file:///C:/Users/murta/OneDrive/Documentos/Networkwalks%20Cybersecurity%20Internship/Week%202/PENETRATION%20TESTING%20REPORT.pdf
 
 
 
