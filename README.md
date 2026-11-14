@@ -266,3 +266,77 @@ Multiple _autodiscover._tcp.networkwalks.com pointing to cpanelemaildiscovery.cp
 The reconnaissance phase successfully gathered essential infrastructure metadata for networkwalks.com. The asset operates on Apache behind a ModSecurity WAF, utilizing HostGator DNS servers and running a WordPress-based web application.
 
 Disclaimer: This documentation and associated commands were performed for educational and authorized testing purposes as part of the Network Walks Cybersecurity Course.
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ __ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ __ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ __ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ __ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ __ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ __ _ _
+
+WEEK 2-PROJECT MODULE 5
+WEEK 2 | PROJECT MODULE 5NETWORK SCANNING WITH ZENMAP: CYBERSECURITY & ETHICAL HACKING PROJECT TASKS
+
+Tasks
+Task1
+Download & install Zenmap from official website on your Windows PC
+Run the setup file after download & follow as in below
+Click on install
+
+Task2
+Find your local IP address & your LAN subnet
+Open CMD & run ipconfig command to find your PC’s local IP address & your local LAN subnet:
+CMD: ENTER ipconfig
+
+
+Task3
+Find the list of live hosts/PC’s in your IP subnet
+ Open Zenmap, input the local LAN subnet & select Ping Scan to find the list of live hosts in your subnet: 
+
+
+Task4
+How many hosts are live in your subnet? 
+Answer: 11 hosts are live (including my PC)
+
+
+Task5
+What are the IP addresses of the live hosts? 
+Answer: 10.0.0.2
+        10.0.0.3
+ 	      10.0.0.4 
+        10.0.0.6
+        10.0.0.7
+        10.0.0.8
+        10.0.0.9
+        10.0.0.12
+        10.0.0.13
+        10.0.0.14
+        10.0.0.19
+
+
+Task6
+What are the MAC addresses of the live hosts?
+
+MAC Address: D0:32:C3:77:FF:06 (D-Link)
+MAC Address: 64:95:6C:AE:4B:9A (LG Electronics)
+MAC Address: A6:EF:5A:A5:EF:5A (Unknown)
+MAC Address: 82:2F:EE:32:0B:C1 (Unknown)
+MAC Address: 88:DE:39:D6:C7:EF (Hangzhou Hikvision Digital Technology)
+MAC Address: 3C:4E:56:30:8C:68 (Shenzhen Chuangwei-RGB Electronics)
+MAC Address: 28:C5:38:8B:62:3F (Apple)
+MAC Address: 82:A7:03:19:2D:14 (Unknown)
+MAC Address: A6:EF:5A:3F:59:DB (Unknown)
+MAC Address: AC:E3:42:96:1E:C1 (Huawei Technologies)
+MAC Address: AC:E3:42:96:1E:C1 (Huawei Technologies)
+
+
+
+Task 7: 
+Display & save the output topology in PDF Format on your desktop: 
+Click on Topology, turn on legend, read the legend in detail & click on Save Graphic:
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ __ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ __ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ __ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ __ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ __ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ __ _ _
+
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ __ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ __ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ __ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ __ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ __ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ __ _ _
+
+
+
+
