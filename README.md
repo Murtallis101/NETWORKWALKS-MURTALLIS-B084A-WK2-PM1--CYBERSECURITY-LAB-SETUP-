@@ -401,9 +401,13 @@ Terminal log outputs (dnsrecon, nslookup, whatweb, curl -I, whois, Nmap/Zenmap).
 Local ARP table mapping outputs.
 Topology graphic PDF export (zenmappgraphics.pdf).
 Technical troubleshooting logs (Hypervisor screen captures, DNS resolution handling).
+
+
 Author & Reference Information
-Author: Rushna Imran (Intern ID: NW-084-318)
-LinkedIn Profile: [https://www.linkedin.com/in/rushna-imran-3338303b6/)
-Google Docs Report: [W2-PM-FINAL - Network Footprinting & Scanning Report.pdf )
+•	Author: Murtallis Marcus Roux
+•	LinkedIn Profile: www.linkedin.com/in/murtallis-roux-02b030270
+•	Github link: 
+•	Google Docs Report: 
+
 
 
